@@ -1,7 +1,7 @@
 import UIKit
 import XCTest
 import SwiftSpriter
-
+@testable import Pods_SwiftSpriter_Example
 class Tests: XCTestCase {
     
     override func setUp() {
@@ -14,15 +14,17 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testParserRead() {
+        let parser = SconParser(fileName: "BasicTests")
+        let animationData = parser?.animationData()
+        XCTAssert(animationData != nil, "Pass")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testParserPerformance() {
+        
         self.measure() {
-            // Put the code you want to measure the time of here.
+            let parser = SconParser(fileName: "BasicTests")
+            _ = parser?.animationData()
         }
     }
     
