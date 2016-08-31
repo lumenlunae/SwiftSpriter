@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftSpriter_Example' do
+  pod 'SwiftSpriter', :path => '../'
+
+  target 'SwiftSpriter_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
