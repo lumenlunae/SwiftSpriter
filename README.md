@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftSpriter.svg?style=flat)](http://cocoapods.org/pods/SwiftSpriter)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftSpriter.svg?style=flat)](http://cocoapods.org/pods/SwiftSpriter)
 
+SwiftSpriter is a port of [INSpriterKit](https://github.com/indieSoftware/INSpriterKit) in Swift. This is an implementation of [Spriter](https://www.brashmonkey.com) in Apple's SpriteKit.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -19,6 +21,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SwiftSpriter"
 ```
+
+## Features
+
+Currently it runs all basic tests except dealing with bone scaling. It's slightly different from INSpriterKit in that it uses SKAction for its keyframe animations (not sure if I want to keep this or not), so currently it only does linear interpolations. 
 
 ## Author
 
