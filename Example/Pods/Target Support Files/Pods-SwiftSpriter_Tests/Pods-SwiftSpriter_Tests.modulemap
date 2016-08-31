@@ -1,0 +1,6 @@
+framework module Pods_SwiftSpriter_Tests {
+  umbrella header "Pods-SwiftSpriter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

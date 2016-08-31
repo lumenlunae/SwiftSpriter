@@ -1,0 +1,16 @@
+PODS:
+  - SwiftSpriter (0.1.0)
+
+DEPENDENCIES:
+  - SwiftSpriter (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftSpriter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftSpriter: 08dd7f9e18e9d7cfe533d57f700a4182058fb012
+
+PODFILE CHECKSUM: bd7d148d07d880b2be2258dd2f624f4cde86bb7c
+
+COCOAPODS: 1.1.0.beta.1

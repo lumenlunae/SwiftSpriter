@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C1D7F01CB638A372AB66E22E742884 /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE8798BEB70DD5900F5CB8EED41507 /* AnimationManager.swift */; };
+		02744265D30E0DA4FA517AF34254B0FB /* SpriterBoneRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BEA9BB1E365C011CEA421E91368E1D /* SpriterBoneRef.swift */; };
+		037D5B286D4E3A8C659C156048E065CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		0A191622DD73DB6FFAA148356634FA7A /* ModelAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAED26565B569D99E2DF1EAE69516A /* ModelAnimation.swift */; };
+		258E9612E106666D9976C59F2D22E2F0 /* SpriterObjectRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEEA42D922B4CC5D07381ABF77F205 /* SpriterObjectRef.swift */; };
+		34BD56F73DB9B25F62D3D6C5E6806705 /* ModelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA44F86DD8A7B8C60B7C37A5201901 /* ModelEntity.swift */; };
+		35B7508A33A7E8BDBAAAC6E020C7539E /* SpriterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D669FAC8A0253944AB4BCAA213FEB /* SpriterEntity.swift */; };
+		47F3A10B493D08F113C8F54C29E0D391 /* ModelRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF1AA95595F0AC45DE19D3E1CD8ACD4 /* ModelRef.swift */; };
+		4A08EE6EEA83D5502C1AE0E5C386693F /* ModelMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE95909CFB170BF029DC46CE9B40898 /* ModelMath.swift */; };
+		5455308C2C0C749534D8F600A66046A5 /* ModelMainline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09685607094E7ED039AB653458373A9 /* ModelMainline.swift */; };
+		55BC525F618263A4A1EAABD62E194BFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5761ED2309D2AE446FC9C4382A8765D8 /* SpriterSpriteTimelineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67522F501E6CB92D5A94D1EB9179939 /* SpriterSpriteTimelineKey.swift */; };
+		5F4178FB7408C97A83E1BA9DFF6F13BD /* SpriterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC27549F54A6B37FBFF47917F7228 /* SpriterAnimation.swift */; };
+		6B777114139F18CBAA3EE1FC6370D077 /* Pods-SwiftSpriter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A314DBE7257F2476AD5B9F7FA279CFA /* Pods-SwiftSpriter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B4F68F45840CC67224FAABAEE06943 /* SpriterTimelineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65733EFD5CB3F214087B214710AE1E70 /* SpriterTimelineKey.swift */; };
+		7A67A2D4F3E16379417B92D8AACD6D8F /* SwiftSpriter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E8B1009D8B6F032356F4FFCF56102 /* SwiftSpriter-dummy.m */; };
+		83EA74A985340A023200FB9BA1E0DA88 /* SpriterFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989FE09C8F68F49B23E3DCEA9ED82889 /* SpriterFolder.swift */; };
+		9D2B216C494DF48105E4E0C6498FC175 /* SpriterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D35A4BC5C2FEE91DA6445F0B99AC3 /* SpriterParser.swift */; };
+		9EB9FF5F4AEF0801E15755EE7D59B371 /* SpriterSpatialInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E10C49A604FC02D1F53E43E4B3F1C /* SpriterSpatialInfo.swift */; };
+		9FFFBBC19542DBD797BC17D11134E831 /* SpriterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048583A7FCEEF2CB7ABB678AE234F94E /* SpriterObject.swift */; };
+		A5EBF13BAF0C2622C08830818B3387D5 /* SpriterTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3613DCF23A247AE071C8B67524940E /* SpriterTimeline.swift */; };
+		AA2B49C60E670C1A257629312085B549 /* Pods-SwiftSpriter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C55265933549FB59374E3B22C903B /* Pods-SwiftSpriter_Tests-dummy.m */; };
+		B321721FF7F5C39B624B5204CAD11441 /* SpriterSpatialTimelineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645A292DF0E8F5384C724BA1FC171C8 /* SpriterSpatialTimelineKey.swift */; };
+		B8A291F17DBDEEC4EF53445B0DB903BB /* ModelTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F2975413F51672460E431FEE025E4 /* ModelTimeline.swift */; };
+		B9BA881E627B1137F7BD099181A88F1E /* Pods-SwiftSpriter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B54683005781B265CA7F0ACBCF06FC1 /* Pods-SwiftSpriter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE023AD4ED6A28B081EB01BED707450E /* SconParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5674BB94D51DB0E156135E73C96087 /* SconParser.swift */; };
+		C90DC7F0CE2AEE42B7D9496D18E3A9FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D0C88CF2ACF915C1694DA4038C66785D /* Pods-SwiftSpriter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E30B47FC40700DFAFDB9E4C01B9AB2 /* Pods-SwiftSpriter_Example-dummy.m */; };
+		DD703CA2CD78B33F491E1AF314FE18F0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23528999846C4D1029478DE43000244E /* ModelData.swift */; };
+		DEFA1BFF2C38D51295C3DC50848DAAD3 /* SpriterBoneTimelineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12ACEB234A1848BA4A0D039603E573 /* SpriterBoneTimelineKey.swift */; };
+		E10F8239E68BC2C94E3FAC3D7A67DA6B /* SpriterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39463381BBF29D2DA65DD61F1173DFA8 /* SpriterConstants.swift */; };
+		E5CE010E25FC9C29690FE537D865834E /* SpriterFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734DBC71C371EF85EBC0D5900700F1 /* SpriterFile.swift */; };
+		E8689BC6A05408C4344C1D635AE8BF96 /* SpriterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C181578F883840C525C5E89D667013 /* SpriterData.swift */; };
+		EB09684BF66A92D2ABBA25A3A5DA374E /* SpriterMainlineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F80C20AF1AEDBC5A3109AA2C8188C0 /* SpriterMainlineKey.swift */; };
+		EB52DAE72D602EA4D8385737BFC2D499 /* ModelTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD61069021E911836489E18584A7B4 /* ModelTexture.swift */; };
+		EF7F1E8F98C70A775145258BD335B21F /* AnimationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F4B59B532ECC63CB9552FDCCA1E1EB /* AnimationNode.swift */; };
+		F2CA5820E0263E7BFF8FE068A96AF648 /* ModelSpatial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750C792DC245E9AB202B6D9B334B22C /* ModelSpatial.swift */; };
+		F42D477CF107030F79A381015221D28F /* SpriterBone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A34519E10D2C6C09025A3EDB40D43 /* SpriterBone.swift */; };
+		F5B27B5846D4118AA76F2D88A7B9B138 /* SwiftSpriter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E76C39E6A184101D6AEDD7B55FFA3C /* SwiftSpriter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7506E154D7B6E1C469EFEA74D4C96B3 /* SpriterMainline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6031089DFC0414AD2610A3360DEBFE /* SpriterMainline.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F96208B418E7418573D1DB3AEBF4806E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDC272CF8272A7930A7F511677E518A;
+			remoteInfo = SwiftSpriter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		048583A7FCEEF2CB7ABB678AE234F94E /* SpriterObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterObject.swift; sourceTree = "<group>"; };
+		0645A292DF0E8F5384C724BA1FC171C8 /* SpriterSpatialTimelineKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterSpatialTimelineKey.swift; sourceTree = "<group>"; };
+		0FCA44F86DD8A7B8C60B7C37A5201901 /* ModelEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelEntity.swift; sourceTree = "<group>"; };
+		17E2B00DDE1AB65F24F58EC104945DA8 /* Pods-SwiftSpriter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftSpriter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1E508B6A775E72CB01E2B046FDE61B00 /* Pods-SwiftSpriter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftSpriter_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		22E76C39E6A184101D6AEDD7B55FFA3C /* SwiftSpriter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpriter-umbrella.h"; sourceTree = "<group>"; };
+		23528999846C4D1029478DE43000244E /* ModelData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		2745F058E328DE11F8064954C2E9E8FA /* Pods-SwiftSpriter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftSpriter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		27AD61069021E911836489E18584A7B4 /* ModelTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelTexture.swift; sourceTree = "<group>"; };
+		2EAAED26565B569D99E2DF1EAE69516A /* ModelAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelAnimation.swift; sourceTree = "<group>"; };
+		31BE8798BEB70DD5900F5CB8EED41507 /* AnimationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
+		32434B0A1653EAAF03A6AFBC84A6123F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374A34519E10D2C6C09025A3EDB40D43 /* SpriterBone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterBone.swift; sourceTree = "<group>"; };
+		39463381BBF29D2DA65DD61F1173DFA8 /* SpriterConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterConstants.swift; sourceTree = "<group>"; };
+		3A314DBE7257F2476AD5B9F7FA279CFA /* Pods-SwiftSpriter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftSpriter_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3F12ACEB234A1848BA4A0D039603E573 /* SpriterBoneTimelineKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterBoneTimelineKey.swift; sourceTree = "<group>"; };
+		4302E173A7D50F22A5E698F3FA68B9CD /* Pods-SwiftSpriter_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftSpriter_Tests-resources.sh"; sourceTree = "<group>"; };
+		44A583F4C32EB1E8E8C9D92E62A3A9BC /* Pods-SwiftSpriter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftSpriter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		471D669FAC8A0253944AB4BCAA213FEB /* SpriterEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterEntity.swift; sourceTree = "<group>"; };
+		4B54683005781B265CA7F0ACBCF06FC1 /* Pods-SwiftSpriter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftSpriter_Example-umbrella.h"; sourceTree = "<group>"; };
+		53D243DEB1E1103E888084962B30670D /* SwiftSpriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSpriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FDDCF182CDEC9A9E2C7E7B9717A91F /* Pods-SwiftSpriter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftSpriter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A0D35A4BC5C2FEE91DA6445F0B99AC3 /* SpriterParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterParser.swift; sourceTree = "<group>"; };
+		5ACAC27549F54A6B37FBFF47917F7228 /* SpriterAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterAnimation.swift; sourceTree = "<group>"; };
+		62F4B59B532ECC63CB9552FDCCA1E1EB /* AnimationNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationNode.swift; sourceTree = "<group>"; };
+		65733EFD5CB3F214087B214710AE1E70 /* SpriterTimelineKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterTimelineKey.swift; sourceTree = "<group>"; };
+		782F23DFF590E07F7C9D1BA6BA46A98C /* Pods-SwiftSpriter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftSpriter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		78BEA9BB1E365C011CEA421E91368E1D /* SpriterBoneRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterBoneRef.swift; sourceTree = "<group>"; };
+		790DAAEFDE8283ABA55054BB590924EB /* SwiftSpriter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSpriter.xcconfig; sourceTree = "<group>"; };
+		7B5674BB94D51DB0E156135E73C96087 /* SconParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SconParser.swift; sourceTree = "<group>"; };
+		7BE18A65F53D6011FE4A60678F63CFBD /* Pods-SwiftSpriter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftSpriter_Example.modulemap"; sourceTree = "<group>"; };
+		85C181578F883840C525C5E89D667013 /* SpriterData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterData.swift; sourceTree = "<group>"; };
+		91734DBC71C371EF85EBC0D5900700F1 /* SpriterFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterFile.swift; sourceTree = "<group>"; };
+		92033136291A72A0CBD97C8268CF1081 /* Pods-SwiftSpriter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftSpriter_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		989FE09C8F68F49B23E3DCEA9ED82889 /* SpriterFolder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterFolder.swift; sourceTree = "<group>"; };
+		9A1E1418990FD7BAD140A29777C0CBBF /* Pods_SwiftSpriter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpriter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE95909CFB170BF029DC46CE9B40898 /* ModelMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelMath.swift; sourceTree = "<group>"; };
+		9D3613DCF23A247AE071C8B67524940E /* SpriterTimeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterTimeline.swift; sourceTree = "<group>"; };
+		A6F1BC5808E30C2D62291333DE308EB4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A982D95A10909F8B5D934FAA4E2CD44B /* Pods-SwiftSpriter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftSpriter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B4F80C20AF1AEDBC5A3109AA2C8188C0 /* SpriterMainlineKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterMainlineKey.swift; sourceTree = "<group>"; };
+		C1869C232B5D5C9D27ACA3586B9DC72C /* Pods-SwiftSpriter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftSpriter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C4DEEA42D922B4CC5D07381ABF77F205 /* SpriterObjectRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterObjectRef.swift; sourceTree = "<group>"; };
+		C7E30B47FC40700DFAFDB9E4C01B9AB2 /* Pods-SwiftSpriter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftSpriter_Example-dummy.m"; sourceTree = "<group>"; };
+		CA6031089DFC0414AD2610A3360DEBFE /* SpriterMainline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterMainline.swift; sourceTree = "<group>"; };
+		CE5E10C49A604FC02D1F53E43E4B3F1C /* SpriterSpatialInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterSpatialInfo.swift; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D16128D91909FB2F7CB51E4765742B95 /* SwiftSpriter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftSpriter.modulemap; sourceTree = "<group>"; };
+		D32E8B1009D8B6F032356F4FFCF56102 /* SwiftSpriter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSpriter-dummy.m"; sourceTree = "<group>"; };
+		D7DD67A87AB57EA041292972235CEC82 /* Pods_SwiftSpriter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpriter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABF39D08CB0AF0B0BA43111251AA91B /* SwiftSpriter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpriter-prefix.pch"; sourceTree = "<group>"; };
+		DC6AE8CFF5BC5E7E4DC710991C9FB24D /* Pods-SwiftSpriter_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftSpriter_Example-resources.sh"; sourceTree = "<group>"; };
+		DDF1AA95595F0AC45DE19D3E1CD8ACD4 /* ModelRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelRef.swift; sourceTree = "<group>"; };
+		E4E657F915BF36BD3688231D4A0AF6C4 /* Pods-SwiftSpriter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftSpriter_Tests.modulemap"; sourceTree = "<group>"; };
+		E53980BB49BD453304FA7E84C4B471D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E750C792DC245E9AB202B6D9B334B22C /* ModelSpatial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelSpatial.swift; sourceTree = "<group>"; };
+		E77F2975413F51672460E431FEE025E4 /* ModelTimeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelTimeline.swift; sourceTree = "<group>"; };
+		EB9C55265933549FB59374E3B22C903B /* Pods-SwiftSpriter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftSpriter_Tests-dummy.m"; sourceTree = "<group>"; };
+		F09685607094E7ED039AB653458373A9 /* ModelMainline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelMainline.swift; sourceTree = "<group>"; };
+		F579117B6B003EF96E36C4453C2A616D /* Pods-SwiftSpriter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftSpriter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F67522F501E6CB92D5A94D1EB9179939 /* SpriterSpriteTimelineKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterSpriteTimelineKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53BB4B3ADA5A9365D695C0B28E724A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC525F618263A4A1EAABD62E194BFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A050AB4E3A9BDEBC72372CBE53FD825A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90DC7F0CE2AEE42B7D9496D18E3A9FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5504AA2D1FAAF57591AFD86D62B6372 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037D5B286D4E3A8C659C156048E065CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16B244EF8A84F5690A651F5BC90D645A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAC27549F54A6B37FBFF47917F7228 /* SpriterAnimation.swift */,
+				374A34519E10D2C6C09025A3EDB40D43 /* SpriterBone.swift */,
+				78BEA9BB1E365C011CEA421E91368E1D /* SpriterBoneRef.swift */,
+				3F12ACEB234A1848BA4A0D039603E573 /* SpriterBoneTimelineKey.swift */,
+				39463381BBF29D2DA65DD61F1173DFA8 /* SpriterConstants.swift */,
+				85C181578F883840C525C5E89D667013 /* SpriterData.swift */,
+				471D669FAC8A0253944AB4BCAA213FEB /* SpriterEntity.swift */,
+				91734DBC71C371EF85EBC0D5900700F1 /* SpriterFile.swift */,
+				989FE09C8F68F49B23E3DCEA9ED82889 /* SpriterFolder.swift */,
+				CA6031089DFC0414AD2610A3360DEBFE /* SpriterMainline.swift */,
+				B4F80C20AF1AEDBC5A3109AA2C8188C0 /* SpriterMainlineKey.swift */,
+				048583A7FCEEF2CB7ABB678AE234F94E /* SpriterObject.swift */,
+				C4DEEA42D922B4CC5D07381ABF77F205 /* SpriterObjectRef.swift */,
+				CE5E10C49A604FC02D1F53E43E4B3F1C /* SpriterSpatialInfo.swift */,
+				0645A292DF0E8F5384C724BA1FC171C8 /* SpriterSpatialTimelineKey.swift */,
+				F67522F501E6CB92D5A94D1EB9179939 /* SpriterSpriteTimelineKey.swift */,
+				9D3613DCF23A247AE071C8B67524940E /* SpriterTimeline.swift */,
+				65733EFD5CB3F214087B214710AE1E70 /* SpriterTimelineKey.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26B763460BD4543D69EB7413F1CB89B3 /* Pods-SwiftSpriter_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A6F1BC5808E30C2D62291333DE308EB4 /* Info.plist */,
+				E4E657F915BF36BD3688231D4A0AF6C4 /* Pods-SwiftSpriter_Tests.modulemap */,
+				56FDDCF182CDEC9A9E2C7E7B9717A91F /* Pods-SwiftSpriter_Tests-acknowledgements.markdown */,
+				F579117B6B003EF96E36C4453C2A616D /* Pods-SwiftSpriter_Tests-acknowledgements.plist */,
+				EB9C55265933549FB59374E3B22C903B /* Pods-SwiftSpriter_Tests-dummy.m */,
+				1E508B6A775E72CB01E2B046FDE61B00 /* Pods-SwiftSpriter_Tests-frameworks.sh */,
+				4302E173A7D50F22A5E698F3FA68B9CD /* Pods-SwiftSpriter_Tests-resources.sh */,
+				3A314DBE7257F2476AD5B9F7FA279CFA /* Pods-SwiftSpriter_Tests-umbrella.h */,
+				2745F058E328DE11F8064954C2E9E8FA /* Pods-SwiftSpriter_Tests.debug.xcconfig */,
+				92033136291A72A0CBD97C8268CF1081 /* Pods-SwiftSpriter_Tests.release.xcconfig */,
+			);
+			name = "Pods-SwiftSpriter_Tests";
+			path = "Target Support Files/Pods-SwiftSpriter_Tests";
+			sourceTree = "<group>";
+		};
+		37C105008098364BB171F8FA6CBEF2C7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31BE8798BEB70DD5900F5CB8EED41507 /* AnimationManager.swift */,
+				62F4B59B532ECC63CB9552FDCCA1E1EB /* AnimationNode.swift */,
+				93BDE6F9E56B80E54E4CF4D97D1626A0 /* AnimationModel */,
+				16B244EF8A84F5690A651F5BC90D645A /* Model */,
+				FA70E5A4B6E4AAE647A55EE2BA43FC61 /* Parser */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3B7CD478B6E8B03B133F7E9AB91C36AF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D49B1CDCD07C044522D9967522F14E8 /* Pods-SwiftSpriter_Example */,
+				26B763460BD4543D69EB7413F1CB89B3 /* Pods-SwiftSpriter_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3E6E02630373BF8AA8A292AEAEDE94F4 /* SwiftSpriter */ = {
+			isa = PBXGroup;
+			children = (
+				37C105008098364BB171F8FA6CBEF2C7 /* Classes */,
+			);
+			path = SwiftSpriter;
+			sourceTree = "<group>";
+		};
+		55E125A21E1866DB4E5F999BEF1E811E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5752D49EE7BB6B37BFCAB12BC225ED12 /* SwiftSpriter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5752D49EE7BB6B37BFCAB12BC225ED12 /* SwiftSpriter */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0C26AC0F43E110DD38E521C6D4C15 /* Support Files */,
+				3E6E02630373BF8AA8A292AEAEDE94F4 /* SwiftSpriter */,
+			);
+			name = SwiftSpriter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7D49B1CDCD07C044522D9967522F14E8 /* Pods-SwiftSpriter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				E53980BB49BD453304FA7E84C4B471D0 /* Info.plist */,
+				7BE18A65F53D6011FE4A60678F63CFBD /* Pods-SwiftSpriter_Example.modulemap */,
+				17E2B00DDE1AB65F24F58EC104945DA8 /* Pods-SwiftSpriter_Example-acknowledgements.markdown */,
+				A982D95A10909F8B5D934FAA4E2CD44B /* Pods-SwiftSpriter_Example-acknowledgements.plist */,
+				C7E30B47FC40700DFAFDB9E4C01B9AB2 /* Pods-SwiftSpriter_Example-dummy.m */,
+				44A583F4C32EB1E8E8C9D92E62A3A9BC /* Pods-SwiftSpriter_Example-frameworks.sh */,
+				DC6AE8CFF5BC5E7E4DC710991C9FB24D /* Pods-SwiftSpriter_Example-resources.sh */,
+				4B54683005781B265CA7F0ACBCF06FC1 /* Pods-SwiftSpriter_Example-umbrella.h */,
+				782F23DFF590E07F7C9D1BA6BA46A98C /* Pods-SwiftSpriter_Example.debug.xcconfig */,
+				C1869C232B5D5C9D27ACA3586B9DC72C /* Pods-SwiftSpriter_Example.release.xcconfig */,
+			);
+			name = "Pods-SwiftSpriter_Example";
+			path = "Target Support Files/Pods-SwiftSpriter_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				55E125A21E1866DB4E5F999BEF1E811E /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FB9C1798478CB4CAEE5FE003BCB09356 /* Products */,
+				3B7CD478B6E8B03B133F7E9AB91C36AF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93BDE6F9E56B80E54E4CF4D97D1626A0 /* AnimationModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAED26565B569D99E2DF1EAE69516A /* ModelAnimation.swift */,
+				23528999846C4D1029478DE43000244E /* ModelData.swift */,
+				0FCA44F86DD8A7B8C60B7C37A5201901 /* ModelEntity.swift */,
+				F09685607094E7ED039AB653458373A9 /* ModelMainline.swift */,
+				9BE95909CFB170BF029DC46CE9B40898 /* ModelMath.swift */,
+				DDF1AA95595F0AC45DE19D3E1CD8ACD4 /* ModelRef.swift */,
+				E750C792DC245E9AB202B6D9B334B22C /* ModelSpatial.swift */,
+				27AD61069021E911836489E18584A7B4 /* ModelTexture.swift */,
+				E77F2975413F51672460E431FEE025E4 /* ModelTimeline.swift */,
+			);
+			path = AnimationModel;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0F0C26AC0F43E110DD38E521C6D4C15 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				32434B0A1653EAAF03A6AFBC84A6123F /* Info.plist */,
+				D16128D91909FB2F7CB51E4765742B95 /* SwiftSpriter.modulemap */,
+				790DAAEFDE8283ABA55054BB590924EB /* SwiftSpriter.xcconfig */,
+				D32E8B1009D8B6F032356F4FFCF56102 /* SwiftSpriter-dummy.m */,
+				DABF39D08CB0AF0B0BA43111251AA91B /* SwiftSpriter-prefix.pch */,
+				22E76C39E6A184101D6AEDD7B55FFA3C /* SwiftSpriter-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftSpriter";
+			sourceTree = "<group>";
+		};
+		FA70E5A4B6E4AAE647A55EE2BA43FC61 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7B5674BB94D51DB0E156135E73C96087 /* SconParser.swift */,
+				5A0D35A4BC5C2FEE91DA6445F0B99AC3 /* SpriterParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		FB9C1798478CB4CAEE5FE003BCB09356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7DD67A87AB57EA041292972235CEC82 /* Pods_SwiftSpriter_Example.framework */,
+				9A1E1418990FD7BAD140A29777C0CBBF /* Pods_SwiftSpriter_Tests.framework */,
+				53D243DEB1E1103E888084962B30670D /* SwiftSpriter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7EF42034EAF6BFB54CF4FDECEA3DB36C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B27B5846D4118AA76F2D88A7B9B138 /* SwiftSpriter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58695030739B74E161CE69BDB1D3CC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BA881E627B1137F7BD099181A88F1E /* Pods-SwiftSpriter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D713849E8654A30921E6C0EBA5C35A15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B777114139F18CBAA3EE1FC6370D077 /* Pods-SwiftSpriter_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		30917B0F6A332343E42FBA064728C476 /* Pods-SwiftSpriter_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3910C5B5CAED3EBE421DAC60E8F58005 /* Build configuration list for PBXNativeTarget "Pods-SwiftSpriter_Tests" */;
+			buildPhases = (
+				80485A0F1466BAAD3F71B83FB8233145 /* Sources */,
+				D5504AA2D1FAAF57591AFD86D62B6372 /* Frameworks */,
+				D713849E8654A30921E6C0EBA5C35A15 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SwiftSpriter_Tests";
+			productName = "Pods-SwiftSpriter_Tests";
+			productReference = 9A1E1418990FD7BAD140A29777C0CBBF /* Pods_SwiftSpriter_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C4A45288774FAE3A816DFE561346877 /* Pods-SwiftSpriter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16E9357A3CF585B46FD1357EBAF74FBE /* Build configuration list for PBXNativeTarget "Pods-SwiftSpriter_Example" */;
+			buildPhases = (
+				ECECF328225AA8B64193BEFAC581AEF8 /* Sources */,
+				A050AB4E3A9BDEBC72372CBE53FD825A /* Frameworks */,
+				A58695030739B74E161CE69BDB1D3CC4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6549721705448EEE68E1C27658415604 /* PBXTargetDependency */,
+			);
+			name = "Pods-SwiftSpriter_Example";
+			productName = "Pods-SwiftSpriter_Example";
+			productReference = D7DD67A87AB57EA041292972235CEC82 /* Pods_SwiftSpriter_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFDC272CF8272A7930A7F511677E518A /* SwiftSpriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FEB522DCD76FF43D2A8240D28210A31 /* Build configuration list for PBXNativeTarget "SwiftSpriter" */;
+			buildPhases = (
+				7CCAC07A464E5404FD03BFAD26CDECB9 /* Sources */,
+				53BB4B3ADA5A9365D695C0B28E724A96 /* Frameworks */,
+				7EF42034EAF6BFB54CF4FDECEA3DB36C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSpriter;
+			productName = SwiftSpriter;
+			productReference = 53D243DEB1E1103E888084962B30670D /* SwiftSpriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FB9C1798478CB4CAEE5FE003BCB09356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C4A45288774FAE3A816DFE561346877 /* Pods-SwiftSpriter_Example */,
+				30917B0F6A332343E42FBA064728C476 /* Pods-SwiftSpriter_Tests */,
+				CFDC272CF8272A7930A7F511677E518A /* SwiftSpriter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CCAC07A464E5404FD03BFAD26CDECB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C1D7F01CB638A372AB66E22E742884 /* AnimationManager.swift in Sources */,
+				EF7F1E8F98C70A775145258BD335B21F /* AnimationNode.swift in Sources */,
+				0A191622DD73DB6FFAA148356634FA7A /* ModelAnimation.swift in Sources */,
+				DD703CA2CD78B33F491E1AF314FE18F0 /* ModelData.swift in Sources */,
+				34BD56F73DB9B25F62D3D6C5E6806705 /* ModelEntity.swift in Sources */,
+				5455308C2C0C749534D8F600A66046A5 /* ModelMainline.swift in Sources */,
+				4A08EE6EEA83D5502C1AE0E5C386693F /* ModelMath.swift in Sources */,
+				47F3A10B493D08F113C8F54C29E0D391 /* ModelRef.swift in Sources */,
+				F2CA5820E0263E7BFF8FE068A96AF648 /* ModelSpatial.swift in Sources */,
+				EB52DAE72D602EA4D8385737BFC2D499 /* ModelTexture.swift in Sources */,
+				B8A291F17DBDEEC4EF53445B0DB903BB /* ModelTimeline.swift in Sources */,
+				BE023AD4ED6A28B081EB01BED707450E /* SconParser.swift in Sources */,
+				5F4178FB7408C97A83E1BA9DFF6F13BD /* SpriterAnimation.swift in Sources */,
+				F42D477CF107030F79A381015221D28F /* SpriterBone.swift in Sources */,
+				02744265D30E0DA4FA517AF34254B0FB /* SpriterBoneRef.swift in Sources */,
+				DEFA1BFF2C38D51295C3DC50848DAAD3 /* SpriterBoneTimelineKey.swift in Sources */,
+				E10F8239E68BC2C94E3FAC3D7A67DA6B /* SpriterConstants.swift in Sources */,
+				E8689BC6A05408C4344C1D635AE8BF96 /* SpriterData.swift in Sources */,
+				35B7508A33A7E8BDBAAAC6E020C7539E /* SpriterEntity.swift in Sources */,
+				E5CE010E25FC9C29690FE537D865834E /* SpriterFile.swift in Sources */,
+				83EA74A985340A023200FB9BA1E0DA88 /* SpriterFolder.swift in Sources */,
+				F7506E154D7B6E1C469EFEA74D4C96B3 /* SpriterMainline.swift in Sources */,
+				EB09684BF66A92D2ABBA25A3A5DA374E /* SpriterMainlineKey.swift in Sources */,
+				9FFFBBC19542DBD797BC17D11134E831 /* SpriterObject.swift in Sources */,
+				258E9612E106666D9976C59F2D22E2F0 /* SpriterObjectRef.swift in Sources */,
+				9D2B216C494DF48105E4E0C6498FC175 /* SpriterParser.swift in Sources */,
+				9EB9FF5F4AEF0801E15755EE7D59B371 /* SpriterSpatialInfo.swift in Sources */,
+				B321721FF7F5C39B624B5204CAD11441 /* SpriterSpatialTimelineKey.swift in Sources */,
+				5761ED2309D2AE446FC9C4382A8765D8 /* SpriterSpriteTimelineKey.swift in Sources */,
+				A5EBF13BAF0C2622C08830818B3387D5 /* SpriterTimeline.swift in Sources */,
+				73B4F68F45840CC67224FAABAEE06943 /* SpriterTimelineKey.swift in Sources */,
+				7A67A2D4F3E16379417B92D8AACD6D8F /* SwiftSpriter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80485A0F1466BAAD3F71B83FB8233145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2B49C60E670C1A257629312085B549 /* Pods-SwiftSpriter_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECECF328225AA8B64193BEFAC581AEF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C88CF2ACF915C1694DA4038C66785D /* Pods-SwiftSpriter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6549721705448EEE68E1C27658415604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftSpriter;
+			target = CFDC272CF8272A7930A7F511677E518A /* SwiftSpriter */;
+			targetProxy = F96208B418E7418573D1DB3AEBF4806E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D2B3622F8704F2CF2B816FF4C8612CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2745F058E328DE11F8064954C2E9E8FA /* Pods-SwiftSpriter_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftSpriter_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftSpriter_Tests/Pods-SwiftSpriter_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftSpriter_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		11839B1EFEEBB3BB1D73713823E6F702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790DAAEFDE8283ABA55054BB590924EB /* SwiftSpriter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpriter/SwiftSpriter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpriter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpriter/SwiftSpriter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftSpriter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1B197E982AB4D0F2F9A743FE936A5AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92033136291A72A0CBD97C8268CF1081 /* Pods-SwiftSpriter_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftSpriter_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftSpriter_Tests/Pods-SwiftSpriter_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftSpriter_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B40630F546BAA3615E2BDB8A3F7FAD06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790DAAEFDE8283ABA55054BB590924EB /* SwiftSpriter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpriter/SwiftSpriter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpriter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpriter/SwiftSpriter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftSpriter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CCC6ACF288EE2B8448277BF118C28BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1869C232B5D5C9D27ACA3586B9DC72C /* Pods-SwiftSpriter_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftSpriter_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftSpriter_Example/Pods-SwiftSpriter_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftSpriter_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D484A11A707AC2BE0841FF384C31C638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782F23DFF590E07F7C9D1BA6BA46A98C /* Pods-SwiftSpriter_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftSpriter_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftSpriter_Example/Pods-SwiftSpriter_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftSpriter_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FEB522DCD76FF43D2A8240D28210A31 /* Build configuration list for PBXNativeTarget "SwiftSpriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40630F546BAA3615E2BDB8A3F7FAD06 /* Debug */,
+				11839B1EFEEBB3BB1D73713823E6F702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16E9357A3CF585B46FD1357EBAF74FBE /* Build configuration list for PBXNativeTarget "Pods-SwiftSpriter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D484A11A707AC2BE0841FF384C31C638 /* Debug */,
+				CCC6ACF288EE2B8448277BF118C28BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3910C5B5CAED3EBE421DAC60E8F58005 /* Build configuration list for PBXNativeTarget "Pods-SwiftSpriter_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D2B3622F8704F2CF2B816FF4C8612CF /* Debug */,
+				1B197E982AB4D0F2F9A743FE936A5AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
