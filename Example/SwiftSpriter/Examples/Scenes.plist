@@ -5,6 +5,7 @@
 	<string>TextureAtlasTest</string>
 	<string>TextureReplacement</string>
 	<string>TexturePivotChanges</string>
+	<string>CharacterMaps</string>
 	<string>SimplePositionTranslation</string>
 	<string>SynchronMovement</string>
 	<string>ScaleAndPivot</string>
