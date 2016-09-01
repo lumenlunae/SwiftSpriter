@@ -24,7 +24,9 @@ pod "SwiftSpriter"
 
 ## Features
 
-Currently it runs all basic tests except dealing with bone scaling. It's slightly different from INSpriterKit in that it uses SKAction for its keyframe animations (not sure if I want to keep this or not), so currently it only does linear interpolations. 
+It only supports the scon extension. Currently it runs all basic tests except dealing with bone scaling. It's slightly different from INSpriterKit in that it uses SKAction for its keyframe animations (not sure if I want to keep this or not), so currently it only does linear interpolations. 
+
+Texture atlases work. Create your *.atlasc file and make sure the scon file uses the atlas. 
 
 ## Author
 
