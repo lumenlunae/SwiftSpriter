@@ -16,7 +16,7 @@ class ModelSpatial: NSObject {
     var time: TimeInterval = 0
     
     var spatialType: SpriterSpatialType = .sprite
-    var curveType: SpriterCurveType = .instant
+    var curveType: SpriterCurveType = .linear
     var nextSpatial: ModelSpatial?
     
     var nodeName: String?
@@ -275,13 +275,10 @@ class ModelSpatial: NSObject {
         while next.idString != "0" {
             let duration = next.time - cur.time
             var group = [SKAction]()
-            if cur.positionX != next.positionX || cur.positionY != next.positionY {
-                
-            }
             
             let moveAction = SKAction.move(to: CGPoint(x: next.positionX, y: next.positionY), duration: duration)
             if self.curveType == .instant {
-                moveAction.timingFunction = ModelSpatial.instantTimingFunction
+                moveAction.timingFunction = self.instantTimingFunction
             }
             
             group.append(moveAction)
@@ -309,10 +306,16 @@ class ModelSpatial: NSObject {
                 group.append(SKAction.rotate(toAngle: angle, duration: duration, shortestUnitArc: true))
             }
             if cur.scaleX != next.scaleX {
-                group.append(SKAction.scaleX(to: next.scaleX, duration: duration))
+                let scaleX = SKAction.scaleX(to: next.scaleX, duration: duration)
+                if self.curveType == .instant {
+                    scaleX.timingFunction = self.instantTimingFunction
+                }
+                group.append(scaleX)
             }
             if cur.scaleY != next.scaleY {
-                group.append(SKAction.scaleY(to: next.scaleY, duration: duration))
+                let scaleY = SKAction.scaleY(to: next.scaleY, duration: duration)
+                scaleY
+                group.append(scaleY)
             }
 
             if group.count > 0 {
@@ -352,8 +355,11 @@ class ModelSpatial: NSObject {
         return "Spatial_\(entityID)_\(animationID)_\(timelineID)"
     }
     
-    static func instantTimingFunction(time: Float) -> Float {
-        return 1
+    func instantTimingFunction(time: Float) -> Float {
+        if time == 1.0 {
+            return 1.0
+        }
+        return 0.99999
     }
 }
 

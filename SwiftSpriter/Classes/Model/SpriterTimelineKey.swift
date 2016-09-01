@@ -13,7 +13,7 @@ struct SpriterTimelineKey: SpriterParseable {
     var id: Int
     var time: TimeInterval = 0
     var spin: SpriterSpinType = .clockwise
-    var curveType: SpriterCurveType = .instant
+    var curveType: SpriterCurveType = .linear
     var c1: CGFloat?
     var c2: CGFloat?
     var object: SpriterObject?

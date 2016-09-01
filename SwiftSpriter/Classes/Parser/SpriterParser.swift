@@ -302,6 +302,10 @@ extension SpriterParser {
         if let zIndex = spriterZIndex {
             spatial.zIndex = CGFloat(zIndex)
         }
+        
+        if let curveType = spriterMainlineKey.curveType {
+            spatial.curveType = curveType
+        }
     }
     
     func addHiddenSpatial(to timeline: ModelTimeline, at spriterTime: TimeInterval) {

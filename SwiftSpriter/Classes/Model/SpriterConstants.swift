@@ -32,6 +32,16 @@ enum SpriterCurveType: Int {
     case linear
     case quadratic
     case cubic
+    
+    init?(string: String) {
+        switch string.lowercased() {
+        case "instant": self = .instant
+        case "linear":  self = .linear
+        case "quadratic": self = .quadratic
+        case "cubic": self = .cubic
+        default: return nil
+        }
+    }
 }
 
 enum SpriterSpatialType: Int {
