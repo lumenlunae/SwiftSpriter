@@ -12,5 +12,6 @@ public struct SpriterData {
     
     var folders: [SpriterFolder]
     var entities: [SpriterEntity]
+    var atlasNames: [String]?
     
 }

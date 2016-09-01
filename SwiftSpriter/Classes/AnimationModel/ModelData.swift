@@ -12,4 +12,5 @@ public class ModelData {
     
     var entitiesByName = [String:ModelEntity]()
     var texturesByID = [String:ModelTexture]()
+    var atlasNames: [String]?
 }

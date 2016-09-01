@@ -19,12 +19,29 @@ public class AnimationManager {
     var lastSystemTime: TimeInterval
     var textureCache: NSCache<NSString, SKTexture>
     let textureLoader: TextureLoader?
+    let textureAtlases: [SKTextureAtlas]?
     
     public init(animationData: ModelData, textureLoader: TextureLoader?) {
         self.animationData = animationData
         self.textureLoader = textureLoader
         
+        if let atlasNames = self.animationData.atlasNames {
+            var atlases = [SKTextureAtlas]()
+            for atlasName in atlasNames {
+                let atlas = SKTextureAtlas(named: atlasName)
+                atlases.append(atlas)
+            }
+            if atlases.count > 0 {
+                textureAtlases = atlases
+            } else {
+                textureAtlases = nil
+            }
+        } else {
+            textureAtlases = nil
+        }
+        
         self.textureCache = NSCache()
+        
         self.lastSystemTime = 0
     }
     
@@ -85,15 +102,27 @@ public class AnimationManager {
     func textureNamed(_ textureName: String, path: String?) -> SKTexture? {
         let key: NSString
         if let path = path {
-            key = NSString(string: path.appending(textureName))
+            key = NSString(string: path.appending("/\(textureName)"))
         } else {
             key = NSString(string: textureName)
         }
+        
+        // Try SKTextureAtlas first
+        if let textureAtlases = self.textureAtlases {
+            for atlas in textureAtlases {
+                if atlas.textureNames.contains(key as String) {
+                    return atlas.textureNamed(key as String)
+                }
+            }
+        }
+        
+        // Then try the cache
         let texture = self.textureCache.object(forKey: key)
         if texture != nil {
            return texture
         }
         
+        // Then call SKTexture on delegate
         if let texture = self.textureLoader?.textureNamed(textureName, path: path) {
             self.textureCache.setObject(texture, forKey: key)
             return texture

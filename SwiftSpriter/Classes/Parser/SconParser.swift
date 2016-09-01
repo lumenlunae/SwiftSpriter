@@ -42,7 +42,24 @@ public class SconParser: SpriterParser {
         
         let entities = self.parseEntities(dict["entity"] as AnyObject)
         
-        self.spriterData = SpriterData(folders: folders, entities: entities)
+        let atlasNames = self.parseAtlases(dict["atlas"] as AnyObject)
+        
+        self.spriterData = SpriterData(folders: folders, entities: entities, atlasNames: atlasNames)
+    }
+    
+    func parseAtlases(_ dicts: AnyObject) -> [String]? {
+        if let atlasDicts = dicts as? [JsonDict] {
+            var atlases = [String]()
+            for atlasDict in atlasDicts {
+                if let name = atlasDict["name"] as? String {
+                    atlases.append(name)
+                }
+            }
+            if atlases.count > 0 {
+                return atlases
+            }
+        }
+        return nil
     }
     
     func parseFolders(_ dicts: AnyObject) -> [SpriterFolder] {

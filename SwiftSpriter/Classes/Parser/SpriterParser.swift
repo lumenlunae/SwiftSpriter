@@ -50,6 +50,9 @@ extension SpriterParser {
         }
         
         let data = ModelData()
+        
+        data.atlasNames = spriterData.atlasNames
+        
         for folder in spriterData.folders {
             for file in folder.files {
                 let texture = ModelTexture()
