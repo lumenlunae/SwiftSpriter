@@ -1,9 +1,9 @@
 {
   "name": "SwiftSpriter",
   "version": "0.1.0",
-  "summary": "A short description of SwiftSpriter.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftSpriter",
+  "summary": "An implementation of Spriter for SpriteKit in Swift",
+  "description": "SwiftSpriter is a port of INSpriterKit in Swift. This is an implementation of the animation tool Spriter in Apple's SpriteKit",
+  "homepage": "https://github.com/lumenlunae/SwiftSpriter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "Matthew Herz": "matthewaherz@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SwiftSpriter.git",
+    "git": "https://github.com/lumenlunae/SwiftSpriter.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/biminiroad",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "SwiftSpriter/Classes/**/*"
 }

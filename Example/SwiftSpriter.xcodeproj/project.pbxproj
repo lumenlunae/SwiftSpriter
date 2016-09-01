@@ -94,6 +94,12 @@
 		7BD96C391D76DA6600BEE730 /* GreyGuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD96C341D76DA6600BEE730 /* GreyGuy.swift */; };
 		7BD96C3A1D76DA6600BEE730 /* Scenes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96C351D76DA6600BEE730 /* Scenes.plist */; };
 		7BD96C3C1D76DAA000BEE730 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD96C3B1D76DAA000BEE730 /* SceneViewController.swift */; };
+		7BD96CC71D76F1E900BEE730 /* greyguyatlas.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96CC21D76F1E900BEE730 /* greyguyatlas.1.png */; };
+		7BD96CC81D76F1E900BEE730 /* greyguyatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96CC31D76F1E900BEE730 /* greyguyatlas.plist */; };
+		7BD96CC91D76F1E900BEE730 /* greyguyatlas.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96CC41D76F1E900BEE730 /* greyguyatlas.json */; };
+		7BD96CCA1D76F1E900BEE730 /* greyguyatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96CC51D76F1E900BEE730 /* greyguyatlas.png */; };
+		7BD96CCB1D76F1E900BEE730 /* greyguyatlas.scon in Resources */ = {isa = PBXBuildFile; fileRef = 7BD96CC61D76F1E900BEE730 /* greyguyatlas.scon */; };
+		7BD96CCD1D76F27C00BEE730 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD96CCC1D76F27B00BEE730 /* SpriteKit.framework */; };
 		A887BE20A519C99C1A1ACADD /* Pods_SwiftSpriter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA6D0C375D1043E44CC0423 /* Pods_SwiftSpriter_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +209,12 @@
 		7BD96C341D76DA6600BEE730 /* GreyGuy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreyGuy.swift; sourceTree = "<group>"; };
 		7BD96C351D76DA6600BEE730 /* Scenes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scenes.plist; sourceTree = "<group>"; };
 		7BD96C3B1D76DAA000BEE730 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		7BD96CC21D76F1E900BEE730 /* greyguyatlas.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyguyatlas.1.png; sourceTree = "<group>"; };
+		7BD96CC31D76F1E900BEE730 /* greyguyatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = greyguyatlas.plist; sourceTree = "<group>"; };
+		7BD96CC41D76F1E900BEE730 /* greyguyatlas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = greyguyatlas.json; path = ../../../../../Dropbox/Work/MessageQuest/Atlas/greyguyatlas.json; sourceTree = "<group>"; };
+		7BD96CC51D76F1E900BEE730 /* greyguyatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greyguyatlas.png; path = ../../../../../Dropbox/Work/MessageQuest/Atlas/greyguyatlas.png; sourceTree = "<group>"; };
+		7BD96CC61D76F1E900BEE730 /* greyguyatlas.scon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = greyguyatlas.scon; path = ../../../../../Dropbox/Work/MessageQuest/Atlas/greyguyatlas.scon; sourceTree = "<group>"; };
+		7BD96CCC1D76F27B00BEE730 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		A952190EC4BB9C9C9A96A063 /* Pods-SwiftSpriter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpriter_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpriter_Example/Pods-SwiftSpriter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BC27F2295511AA39FCB17111 /* Pods-SwiftSpriter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSpriter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSpriter_Tests/Pods-SwiftSpriter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DDA6D0C375D1043E44CC0423 /* Pods_SwiftSpriter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpriter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD96CCD1D76F27C00BEE730 /* SpriteKit.framework in Frameworks */,
 				A887BE20A519C99C1A1ACADD /* Pods_SwiftSpriter_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +329,7 @@
 		7BD96AF61D76D8B300BEE730 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7BD96CC01D76F12900BEE730 /* Atlas */,
 				7BD96B931D76D91300BEE730 /* BasicTests.scon */,
 				7BD96B941D76D91300BEE730 /* GreyGuy */,
 			);
@@ -471,9 +485,31 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		7BD96CC01D76F12900BEE730 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				7BD96CC11D76F1E900BEE730 /* greyguyatlas.atlasc */,
+				7BD96CC41D76F1E900BEE730 /* greyguyatlas.json */,
+				7BD96CC51D76F1E900BEE730 /* greyguyatlas.png */,
+				7BD96CC61D76F1E900BEE730 /* greyguyatlas.scon */,
+			);
+			name = Atlas;
+			sourceTree = "<group>";
+		};
+		7BD96CC11D76F1E900BEE730 /* greyguyatlas.atlasc */ = {
+			isa = PBXGroup;
+			children = (
+				7BD96CC21D76F1E900BEE730 /* greyguyatlas.1.png */,
+				7BD96CC31D76F1E900BEE730 /* greyguyatlas.plist */,
+			);
+			name = greyguyatlas.atlasc;
+			path = ../../../../../Dropbox/Work/MessageQuest/Atlas/greyguyatlas.atlasc;
+			sourceTree = "<group>";
+		};
 		EEFBF5AAADBEB099B426C3B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD96CCC1D76F27B00BEE730 /* SpriteKit.framework */,
 				DDA6D0C375D1043E44CC0423 /* Pods_SwiftSpriter_Example.framework */,
 				6305843D66563A19BFEB1C9D /* Pods_SwiftSpriter_Tests.framework */,
 			);
@@ -536,6 +572,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = FDRZGVC4YA;
 						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -574,6 +611,7 @@
 				7BD96C101D76D91300BEE730 /* p_hand_slide_0.png in Resources */,
 				7BD96BFD1D76D91300BEE730 /* p_hand_a.png in Resources */,
 				7BD96C251D76D91300BEE730 /* p_pelvis_walk.png in Resources */,
+				7BD96CCB1D76F1E900BEE730 /* greyguyatlas.scon in Resources */,
 				7BD96C0F1D76D91300BEE730 /* p_hand_push_a.png in Resources */,
 				7BD96BEF1D76D91300BEE730 /* p_forarm_under_0.png in Resources */,
 				7BD96C0A1D76D91300BEE730 /* p_hand_jump_a.png in Resources */,
@@ -583,6 +621,7 @@
 				7BD96BFC1D76D91300BEE730 /* p_hand_2.png in Resources */,
 				7BD96BFA1D76D91300BEE730 /* hand-gun.png in Resources */,
 				7BD96BFF1D76D91300BEE730 /* p_hand_b.png in Resources */,
+				7BD96CC71D76F1E900BEE730 /* greyguyatlas.1.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				7BD96C241D76D91300BEE730 /* p_pelvis_idle.png in Resources */,
 				7BD96C0B1D76D91300BEE730 /* p_hand_prepunch_0.png in Resources */,
@@ -603,6 +642,7 @@
 				7BD96C1C1D76D91300BEE730 /* p_head_idle_blink_1.png in Resources */,
 				7BD96BF91D76D91300BEE730 /* greyguy.scon in Resources */,
 				7BD96C021D76D91300BEE730 /* p_hand_float_0.png in Resources */,
+				7BD96CC91D76F1E900BEE730 /* greyguyatlas.json in Resources */,
 				7BD96C1A1D76D91300BEE730 /* p_head_idle.png in Resources */,
 				7BD96BE51D76D91300BEE730 /* BasicTests.scon in Resources */,
 				7BD96C2D1D76D91300BEE730 /* p_torso_punch_0.png in Resources */,
@@ -629,9 +669,11 @@
 				7BD96C2E1D76D91300BEE730 /* p_torso_walk.png in Resources */,
 				7BD96BF21D76D91300BEE730 /* Copyright_Information_Please_Read.txt in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				7BD96CC81D76F1E900BEE730 /* greyguyatlas.plist in Resources */,
 				7BD96C2B1D76D91300BEE730 /* p_torso_idle.png in Resources */,
 				7BD96C071D76D91300BEE730 /* p_hand_hit_a.png in Resources */,
 				7BD96C161D76D91300BEE730 /* p_head_concern_blink_0.png in Resources */,
+				7BD96CCA1D76F1E900BEE730 /* greyguyatlas.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				7BD96C231D76D91300BEE730 /* p_pelvis_die.png in Resources */,
 				7BD96C051D76D91300BEE730 /* p_hand_hang_a.png in Resources */,
@@ -849,6 +891,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -888,6 +931,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -898,6 +942,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FDRZGVC4YA;
 				INFOPLIST_FILE = SwiftSpriter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -913,6 +958,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FDRZGVC4YA;
 				INFOPLIST_FILE = SwiftSpriter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
