@@ -28,6 +28,8 @@ public class AnimationNode: SKNode {
     var animationPlayback: Bool = false
     public var animationNodeDelegate: AnimationNodeDelegate?
     
+    var isUsingActions = true
+
     public func loadEntity(_ entityName: String, fromManager manager: AnimationManager) -> Bool {
         self.animationManager?.removeAnimationNode(self)
         
@@ -116,12 +118,17 @@ public class AnimationNode: SKNode {
         // first build nodes and actions
         for timeline in animation.timelinesByID.values {
             let spatial = timeline.spatialsByTime[0]
-            spatial.createActions()
+            if isUsingActions {
+                spatial.createActions()
+            }
             if let node = spatial.createNode(forManager: manager) {
                 self.addChild(node)
-                if spatial.actions.count > 0 {
-                    var repeatActions = SKAction.repeatForever(SKAction.sequence(spatial.actions))
-                    //node.run(repeatActions)
+                if self.isUsingActions {
+                    spatial.setupNode()
+                    if spatial.actions.count > 0 {
+                        var repeatActions = SKAction.repeatForever(SKAction.sequence(spatial.actions))
+                        node.run(repeatActions)
+                    }
                 }
             }
         }
@@ -187,10 +194,10 @@ public class AnimationNode: SKNode {
             }
             
             if spatial.equals(time: self.currentAnimationTime) {
-                spatial.updateNode(spatialNode, objectRef: objectRef, interpolation: 0.0, animationManager: manager, currentTime: self.currentAnimationTime)
+                spatial.updateNode(spatialNode, objectRef: objectRef, interpolation: 0.0, animationManager: manager, currentTime: self.currentAnimationTime, isUsingActions: self.isUsingActions)
             } else {
                 let interpolation = spatial.interpolationRatio(forTime: self.currentAnimationTime)
-                spatial.updateNode(spatialNode, objectRef: objectRef, interpolation: interpolation, animationManager: manager, currentTime: self.currentAnimationTime)
+                spatial.updateNode(spatialNode, objectRef: objectRef, interpolation: interpolation, animationManager: manager, currentTime: self.currentAnimationTime, isUsingActions: self.isUsingActions)
             }
         }
     }

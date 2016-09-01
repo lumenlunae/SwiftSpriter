@@ -16,6 +16,7 @@ class ModelSpatial: NSObject {
     var time: TimeInterval = 0
     
     var spatialType: SpriterSpatialType = .sprite
+    var curveType: SpriterCurveType = .instant
     var nextSpatial: ModelSpatial?
     
     var nodeName: String?
@@ -49,6 +50,7 @@ class ModelSpatial: NSObject {
         self.idString = "\(id)"
         self.time = key.time / 1000.0
         self.isHidden = false
+        self.curveType = key.curveType
     }
     
     init(modelSpatial: ModelSpatial) {
@@ -124,6 +126,7 @@ class ModelSpatial: NSObject {
             sprite.zPosition = self.zIndex
             node = sprite
         case .node:
+            // attempted SKEffectNode but performance went to hell
             node = SKNode()
         default:
             fatalError("Unknown spatial type")
@@ -166,7 +169,7 @@ class ModelSpatial: NSObject {
         }
     }
     
-    func updateNode(_ node: SKNode, objectRef: SpriterObjectRef?, interpolation: CGFloat, animationManager: AnimationManager, currentTime: TimeInterval) {
+    func updateNode(_ node: SKNode, objectRef: SpriterObjectRef?, interpolation: CGFloat, animationManager: AnimationManager, currentTime: TimeInterval, isUsingActions: Bool = false) {
         guard let nextSpatial = self.nextSpatial,
             interpolation >= 0.0,
             interpolation <= 1.0,
@@ -181,18 +184,28 @@ class ModelSpatial: NSObject {
         
         
         if interpolation == 0.0 {
-            node.position = CGPoint(x: self.positionX, y: self.positionY)
             node.alpha = self.alpha
-            node.zRotation = self.angle
+            
+            if !isUsingActions {
+                node.position = CGPoint(x: self.positionX, y: self.positionY)
+                node.zRotation = self.angle
+            }
             
         } else {
-            let nodePosX = LinearInterpolation(a: self.positionX, b: nextSpatial.positionX, t: interpolation)
-            let nodePosY = LinearInterpolation(a: self.positionY, b: nextSpatial.positionY, t: interpolation)
-            node.position = CGPoint(x: nodePosX, y: nodePosY)
-            node.alpha = LinearInterpolation(a: self.alpha, b: nextSpatial.alpha, t: interpolation)
+            let alpha = LinearInterpolation(a: self.alpha, b: nextSpatial.alpha, t: interpolation)
+            if node.alpha != alpha {
+                node.alpha = alpha
+            }
             
-            let spatialAngle = LinearAngleInterpolationRadian(angleA: self.angle, angleB: nextSpatial.angle, spin: self.spin.rawValue, t: interpolation)
-            node.zRotation = spatialAngle
+            if !isUsingActions {
+                let nodePosX = LinearInterpolation(a: self.positionX, b: nextSpatial.positionX, t: interpolation)
+                let nodePosY = LinearInterpolation(a: self.positionY, b: nextSpatial.positionY, t: interpolation)
+                node.position = CGPoint(x: nodePosX, y: nodePosY)
+                
+                
+                let spatialAngle = LinearAngleInterpolationRadian(angleA: self.angle, angleB: nextSpatial.angle, spin: self.spin.rawValue, t: interpolation)
+                node.zRotation = spatialAngle
+            }
         }
         
         // update node depending values
@@ -203,17 +216,22 @@ class ModelSpatial: NSObject {
             
             if interpolation == 0.0 {
                 spriteNode.anchorPoint = CGPoint(x: self.pivotX, y: self.pivotY)
-                node.xScale = self.scaleX
-                node.yScale = self.scaleY
+                
             } else {
                 let anchorX = LinearInterpolation(a: self.pivotX, b: nextSpatial.pivotX, t: interpolation)
                 let anchorY = LinearInterpolation(a: self.pivotY, b: nextSpatial.pivotY, t: interpolation)
                 spriteNode.anchorPoint = CGPoint(x: anchorX, y: anchorY)
-                
-                node.xScale = LinearInterpolation(a: self.scaleX, b: nextSpatial.scaleX, t: interpolation)
-                node.yScale = LinearInterpolation(a: self.scaleY, b: nextSpatial.scaleY, t: interpolation)
             }
             
+            if !isUsingActions {
+                if interpolation == 0.0 {
+                    node.xScale = self.scaleX
+                    node.yScale = self.scaleY
+                } else {
+                    node.xScale = LinearInterpolation(a: self.scaleX, b: nextSpatial.scaleX, t: interpolation)
+                    node.yScale = LinearInterpolation(a: self.scaleY, b: nextSpatial.scaleY, t: interpolation)
+                }
+            }
             // set zIndex
             if let objectRef = objectRef,
                 let zIndex = objectRef.zIndex {
@@ -222,18 +240,14 @@ class ModelSpatial: NSObject {
             
             if let fileName = self.texture?.fileName {
                 let texture = animationManager.textureNamed(fileName, path: self.texture?.relativePath)
-                spriteNode.texture = texture
+                if spriteNode.texture != texture {
+                    spriteNode.texture = texture
+                }
             }
         } else if self.spatialType == .node {
             // nothing
             /*
-            if interpolation == 0.0 {
-                node.xScale = self.scaleX
-                node.yScale = self.scaleY
-            } else {
-                node.xScale = LinearInterpolation(a: self.scaleX, b: nextSpatial.scaleX, t: interpolation)
-                node.yScale = LinearInterpolation(a: self.scaleY, b: nextSpatial.scaleY, t: interpolation)
-            }
+            
             */
         } else {
             fatalError("Unknown spatial type")
@@ -256,16 +270,21 @@ class ModelSpatial: NSObject {
         guard var next = nextSpatial else {
             return
         }
+        
         var cur: ModelSpatial = self
         while next.idString != "0" {
             let duration = next.time - cur.time
             var group = [SKAction]()
-            if cur.positionX != next.positionX {
-                group.append(SKAction.moveTo(x: next.positionX, duration:duration))
+            if cur.positionX != next.positionX || cur.positionY != next.positionY {
+                
             }
-            if cur.positionY != next.positionY {
-                group.append(SKAction.moveTo(y: next.positionY, duration:duration))
+            
+            let moveAction = SKAction.move(to: CGPoint(x: next.positionX, y: next.positionY), duration: duration)
+            if self.curveType == .instant {
+                moveAction.timingFunction = ModelSpatial.instantTimingFunction
             }
+            
+            group.append(moveAction)
             if cur.angle != next.angle {
                 var angle = next.angle
                 if spin == .clockwise {
@@ -293,7 +312,7 @@ class ModelSpatial: NSObject {
                 group.append(SKAction.scaleX(to: next.scaleX, duration: duration))
             }
             if cur.scaleY != next.scaleY {
-                group.append(SKAction.scaleY(to: next.scaleX, duration: duration))
+                group.append(SKAction.scaleY(to: next.scaleY, duration: duration))
             }
 
             if group.count > 0 {
@@ -331,6 +350,10 @@ class ModelSpatial: NSObject {
     
     static func composeName(withTimelineID timelineID:Int, animationID: Int, entityID: Int) -> String {
         return "Spatial_\(entityID)_\(animationID)_\(timelineID)"
+    }
+    
+    static func instantTimingFunction(time: Float) -> Float {
+        return 1
     }
 }
 
