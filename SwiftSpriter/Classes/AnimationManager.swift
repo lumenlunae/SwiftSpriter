@@ -101,8 +101,8 @@ public class AnimationManager {
     
     func textureNamed(_ textureName: String, path: String?) -> SKTexture? {
         let key: NSString
-        if let path = path {
-            key = NSString(string: path.appending("/\(textureName)"))
+        if let keyPath = path, keyPath.characters.count > 0 {
+            key = NSString(string: keyPath.appending("/\(textureName)"))
         } else {
             key = NSString(string: textureName)
         }
