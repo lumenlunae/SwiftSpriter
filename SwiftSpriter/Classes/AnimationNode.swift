@@ -161,10 +161,17 @@ public class AnimationNode: SKNode {
             guard let nodeName = spatial.nodeName else {
                 continue
             }
-            let searchString = "//\(nodeName)"
-            guard let spatialNode = self.childNode(withName: searchString) else {
-                fatalError("There should be a node for each spatial")
-                return
+            
+            let spatialNode: SKNode
+            if let node = spatial.node {
+                spatialNode = node
+            } else {
+                let searchString = "//\(nodeName)"
+                guard let searchedNode = self.childNode(withName: searchString) else {
+                    fatalError("There should be a node for each spatial")
+                    return
+                }
+                spatialNode = searchedNode
             }
             
             if spatial.parentNodeName == nil {
