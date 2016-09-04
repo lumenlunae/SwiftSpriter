@@ -43,7 +43,7 @@ class ModelSpatial: NSObject {
     var pivotX: CGFloat = 0
     var pivotY: CGFloat = 1
     
-    var actions = [SKAction]()
+    var actionsByName = [String: [SKAction]]()
     
     init(key: SpriterTimelineKey) {
         self.id = key.id
@@ -264,9 +264,12 @@ class ModelSpatial: NSObject {
         return CGFloat((time - self.time) / (nextSpatial.time - self.time))
     }
     
-    func createActions() {
+    func createActions(for name: String) {
+        guard self.actionsByName[name] == nil else {
+            return
+        }
         // loop through all your spatials
-        
+        var actions = [SKAction]()
         guard var next = nextSpatial else {
             return
         }
@@ -325,6 +328,7 @@ class ModelSpatial: NSObject {
             cur = next
             next = next.nextSpatial!
         }
+        self.actionsByName[name] = actions
     }
     
     func transform(withParent parent: ModelSpatial) {

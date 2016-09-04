@@ -56,8 +56,11 @@ public class AnimationNode: SKNode {
         
         self.animation = animation
         self.animationLength = animation.length
+        if animationName == "Dying" {
+            animation.isLooping = false
+        }
         self.loopAnimation = animation.isLooping
-        self.buildNodeTreeFromTimelines()
+        self.buildNodeTreeFromTimelines(animationName: animationName)
         self.currentAnimationTime = 0
         self.animationPlayback = true
         
@@ -109,7 +112,7 @@ public class AnimationNode: SKNode {
         }
     }
     
-    func buildNodeTreeFromTimelines() {
+    func buildNodeTreeFromTimelines(animationName: String) {
         guard let animation = self.animation,
             let manager = self.animationManager else {
             fatalError("Animation required")
@@ -119,21 +122,26 @@ public class AnimationNode: SKNode {
         for timeline in animation.timelinesByID.values {
             let spatial = timeline.spatialsByTime[0]
             if isUsingActions {
-                spatial.createActions()
+                spatial.createActions(for: animationName)
             }
             if let node = spatial.createNode(forManager: manager) {
                 self.addChild(node)
                 if self.isUsingActions {
                     spatial.setupNode()
-                    if spatial.actions.count > 0 {
-                        var repeatActions = SKAction.repeatForever(SKAction.sequence(spatial.actions))
-                        node.run(repeatActions)
+                    if let actions = spatial.actionsByName[animationName], actions.count > 0 {
+                        if self.loopAnimation {
+                            var repeatActions = SKAction.repeatForever(SKAction.sequence(actions))
+                            node.run(repeatActions)
+                        } else {
+                            node.run(SKAction.sequence(actions))
+                        }
                     }
                 }
             }
         }
     }
-    
+
+
     func updateTime(deltaTime: TimeInterval) {
         if !self.animationPlayback || self.animation == nil {
             return
