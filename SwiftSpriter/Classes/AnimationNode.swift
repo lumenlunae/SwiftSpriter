@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import UIKit
 
 public protocol AnimationNodeDelegate {
     func animationNodeDidFinishPlayback(animationNode: AnimationNode, looping: Bool)

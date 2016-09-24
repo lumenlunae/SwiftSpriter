@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ModelTexture {
     var textureID: String?

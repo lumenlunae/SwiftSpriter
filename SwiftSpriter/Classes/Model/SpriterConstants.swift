@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let SpriterRefNoParentValue: Int = -1
 let SpriterObjectNoPivotValue: CGFloat = CGFloat.leastNormalMagnitude
