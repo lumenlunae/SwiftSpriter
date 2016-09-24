@@ -141,7 +141,7 @@ public class SconParser: SpriterParser {
         return item
     }
     
-    func parseItems<T:SpriterParseable>(_ dicts: AnyObject, dataBlock: (@escaping (inout T, JsonDict) -> Void)? =  nil) -> [T] {
+    func parseItems<T:SpriterParseable>(_ dicts: AnyObject, dataBlock: ((inout T, JsonDict) -> Void)? =  nil) -> [T] {
         guard let dicts = dicts as? [JsonDict] else {
             return []
         }
