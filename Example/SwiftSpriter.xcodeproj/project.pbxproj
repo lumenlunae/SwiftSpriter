@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7B469E401D7CCAE600383918 /* RotationScaleBug.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B469E3F1D7CCAE600383918 /* RotationScaleBug.sks */; };
 		7B5C040F1D7822D200B79C22 /* greyguyatlas.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C040C1D7822D200B79C22 /* greyguyatlas.1.png */; };
 		7B5C04101D7822D200B79C22 /* greyguyatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C040D1D7822D200B79C22 /* greyguyatlas.plist */; };
 		7B5C04111D7822D200B79C22 /* greyguyatlas.scon in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C040E1D7822D200B79C22 /* greyguyatlas.scon */; };
@@ -132,6 +133,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6305843D66563A19BFEB1C9D /* Pods_SwiftSpriter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSpriter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B469E3F1D7CCAE600383918 /* RotationScaleBug.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RotationScaleBug.sks; sourceTree = "<group>"; };
 		7B5C040C1D7822D200B79C22 /* greyguyatlas.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyguyatlas.1.png; sourceTree = "<group>"; };
 		7B5C040D1D7822D200B79C22 /* greyguyatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = greyguyatlas.plist; sourceTree = "<group>"; };
 		7B5C040E1D7822D200B79C22 /* greyguyatlas.scon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = greyguyatlas.scon; path = Resources/Atlas/greyguyatlas.scon; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				7BD96C341D76DA6600BEE730 /* GreyGuy.swift */,
 				7B5C04121D7822EA00B79C22 /* TextureAtlasTest.swift */,
 				7B7843D91D78AEA000C00994 /* CharacterMaps.swift */,
+				7B469E3F1D7CCAE600383918 /* RotationScaleBug.sks */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				7BD96C3A1D76DA6600BEE730 /* Scenes.plist in Resources */,
 				7BD96C0E1D76D91300BEE730 /* p_hand_push_0.png in Resources */,
 				7BD96C2C1D76D91300BEE730 /* p_torso_jump.png in Resources */,
+				7B469E401D7CCAE600383918 /* RotationScaleBug.sks in Resources */,
 				7BD96C1D1D76D91300BEE730 /* p_head_push.png in Resources */,
 				7BD96BF61D76D91300BEE730 /* p_foot_jump_0.png in Resources */,
 				7BD96C081D76D91300BEE730 /* p_hand_idle_0.png in Resources */,
