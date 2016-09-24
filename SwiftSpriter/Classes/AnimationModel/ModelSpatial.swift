@@ -121,7 +121,8 @@ class ModelSpatial: NSObject {
                 return nil
             }
             let size = CGSize(width: modelTexture.width, height: modelTexture.height)
-            let sprite = SKSpriteNode(texture: texture, size: size)
+            let sprite = SpriteAnimationNode(texture: texture, size: size)
+            sprite.textureName = fileName
             sprite.anchorPoint = CGPoint(x: self.pivotX, y: self.pivotY)
             sprite.zPosition = self.zIndex
             node = sprite
@@ -210,7 +211,7 @@ class ModelSpatial: NSObject {
         
         // update node depending values
         if self.spatialType == .sprite {
-            guard let spriteNode = node as? SKSpriteNode else {
+            guard let spriteNode = node as? SpriteAnimationNode else {
                 fatalError("Node expected to be a sprite node")
             }
             
@@ -238,11 +239,10 @@ class ModelSpatial: NSObject {
                 spriteNode.zPosition = CGFloat(zIndex)
             }
             
-            if let fileName = self.texture?.fileName {
+            if let fileName = self.texture?.fileName, fileName != spriteNode.textureName {
                 let texture = animationManager.textureNamed(fileName, path: self.texture?.relativePath)
-                if spriteNode.texture != texture {
-                    spriteNode.texture = texture
-                }
+                spriteNode.texture = texture
+                spriteNode.textureName = fileName
             }
         } else if self.spatialType == .node {
             // nothing

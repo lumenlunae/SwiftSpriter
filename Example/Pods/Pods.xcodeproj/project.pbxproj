@@ -23,6 +23,7 @@
 		6B777114139F18CBAA3EE1FC6370D077 /* Pods-SwiftSpriter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A314DBE7257F2476AD5B9F7FA279CFA /* Pods-SwiftSpriter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B4F68F45840CC67224FAABAEE06943 /* SpriterTimelineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65733EFD5CB3F214087B214710AE1E70 /* SpriterTimelineKey.swift */; };
 		7A67A2D4F3E16379417B92D8AACD6D8F /* SwiftSpriter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D32E8B1009D8B6F032356F4FFCF56102 /* SwiftSpriter-dummy.m */; };
+		7B3DEEB21D97024100D7C74F /* SpriteAnimationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DEEB11D97024100D7C74F /* SpriteAnimationNode.swift */; };
 		83EA74A985340A023200FB9BA1E0DA88 /* SpriterFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989FE09C8F68F49B23E3DCEA9ED82889 /* SpriterFolder.swift */; };
 		9D2B216C494DF48105E4E0C6498FC175 /* SpriterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D35A4BC5C2FEE91DA6445F0B99AC3 /* SpriterParser.swift */; };
 		9EB9FF5F4AEF0801E15755EE7D59B371 /* SpriterSpatialInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E10C49A604FC02D1F53E43E4B3F1C /* SpriterSpatialInfo.swift */; };
@@ -89,6 +90,7 @@
 		782F23DFF590E07F7C9D1BA6BA46A98C /* Pods-SwiftSpriter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftSpriter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		78BEA9BB1E365C011CEA421E91368E1D /* SpriterBoneRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterBoneRef.swift; sourceTree = "<group>"; };
 		790DAAEFDE8283ABA55054BB590924EB /* SwiftSpriter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSpriter.xcconfig; sourceTree = "<group>"; };
+		7B3DEEB11D97024100D7C74F /* SpriteAnimationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteAnimationNode.swift; sourceTree = "<group>"; };
 		7B5674BB94D51DB0E156135E73C96087 /* SconParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SconParser.swift; sourceTree = "<group>"; };
 		7BE18A65F53D6011FE4A60678F63CFBD /* Pods-SwiftSpriter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftSpriter_Example.modulemap"; sourceTree = "<group>"; };
 		85C181578F883840C525C5E89D667013 /* SpriterData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpriterData.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				93BDE6F9E56B80E54E4CF4D97D1626A0 /* AnimationModel */,
 				16B244EF8A84F5690A651F5BC90D645A /* Model */,
 				FA70E5A4B6E4AAE647A55EE2BA43FC61 /* Parser */,
+				7B3DEEB11D97024100D7C74F /* SpriteAnimationNode.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				E5CE010E25FC9C29690FE537D865834E /* SpriterFile.swift in Sources */,
 				83EA74A985340A023200FB9BA1E0DA88 /* SpriterFolder.swift in Sources */,
 				F7506E154D7B6E1C469EFEA74D4C96B3 /* SpriterMainline.swift in Sources */,
+				7B3DEEB21D97024100D7C74F /* SpriteAnimationNode.swift in Sources */,
 				EB09684BF66A92D2ABBA25A3A5DA374E /* SpriterMainlineKey.swift in Sources */,
 				9FFFBBC19542DBD797BC17D11134E831 /* SpriterObject.swift in Sources */,
 				258E9612E106666D9976C59F2D22E2F0 /* SpriterObjectRef.swift in Sources */,
