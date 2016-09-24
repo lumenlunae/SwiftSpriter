@@ -174,12 +174,12 @@ public class AnimationNode: SKNode {
             if let node = spatial.node {
                 spatialNode = node
             } else {
-                let searchString = "//\(nodeName)"
-                guard let searchedNode = self.childNode(withName: searchString) else {
-                    fatalError("There should be a node for each spatial")
-                    return
+                let firstSpatial = timeline.spatialsByTime[0]
+                guard let firstSpatialNode = firstSpatial.node else {
+                    fatalError("First spatial should exist")
                 }
-                spatialNode = searchedNode
+                spatial.node = firstSpatialNode
+                spatialNode = firstSpatialNode
             }
             
             if spatial.parentNodeName == nil {
