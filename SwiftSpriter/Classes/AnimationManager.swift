@@ -111,7 +111,10 @@ public class AnimationManager {
         if let textureAtlases = self.textureAtlases {
             for atlas in textureAtlases {
                 if atlas.textureNames.contains(key as String) {
-                    return atlas.textureNamed(key as String)
+                    let texture = atlas.textureNamed(key as String)
+                    texture.filteringMode = .nearest
+                    texture.usesMipmaps = true;
+                    return texture
                 }
             }
         }
@@ -125,6 +128,8 @@ public class AnimationManager {
         // Then call SKTexture on delegate
         if let texture = self.textureLoader?.textureNamed(textureName, path: path) {
             self.textureCache.setObject(texture, forKey: key)
+            texture.filteringMode = .nearest
+            texture.usesMipmaps = true;
             return texture
         }
         
