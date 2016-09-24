@@ -25,7 +25,7 @@ public class SconParser: SpriterParser {
         do {
             try parse(fileName: fileName)
         } catch {
-            print("Error \(error)")
+            //print("Error \(error)")
             return nil
         }
     }
