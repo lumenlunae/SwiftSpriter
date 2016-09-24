@@ -67,11 +67,11 @@ class BasicTestScene: SKScene, TextureLoader, AnimationNodeDelegate {
     }
     
     func textureNamed(_ textureName: String, path: String?) -> SKTexture? {
-        print("TextureLoader loads \(path) \(textureName)")
+        //print("TextureLoader loads \(path) \(textureName)")
         return SKTexture(imageNamed: textureName)
     }
     
     func animationNodeDidFinishPlayback(animationNode: AnimationNode, looping: Bool) {
-        print("Animation did finish playback. Looping: \(looping)")
+        //print("Animation did finish playback. Looping: \(looping)")
     }
 }

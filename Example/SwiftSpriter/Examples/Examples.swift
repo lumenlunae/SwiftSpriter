@@ -233,6 +233,6 @@ class BoneScale2: SKScene {
         node.zRotation = self.angle
         
         
-        print("Random angle \(angle)\n\(node)")
+        //print("Random angle \(angle)\n\(node)")
     }
 }
