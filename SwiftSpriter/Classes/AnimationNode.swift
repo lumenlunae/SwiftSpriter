@@ -19,7 +19,7 @@ public class AnimationNode: SKNode {
     var animationManager: AnimationManager?
     var entity: ModelEntity?
     var animation: ModelAnimation?
-    var currentAnimationName: String? {
+    public var currentAnimationName: String? {
         return self.animation?.name
     }
     public var animationSpeed: CGFloat = 1.0
