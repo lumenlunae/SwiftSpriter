@@ -194,7 +194,8 @@ public class AnimationNode: SKNode {
                     guard let parentNodeName = spatial.parentNodeName else {
                         continue
                     }
-                    let searchString = "//\(parentNodeName)"
+            
+                    let searchString = ".//\(parentNodeName)"
                     guard let parentNode = self.childNode(withName: searchString) else {
                         fatalError("There should be a parent node")
                     }
