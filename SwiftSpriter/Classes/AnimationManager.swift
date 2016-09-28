@@ -11,6 +11,13 @@ import SpriteKit
 
 public protocol TextureLoader {
     func textureNamed(_ textureName: String, path: String?) -> SKTexture?
+    func textureAtlases(animationManager: AnimationManager) -> [SKTextureAtlas]?
+}
+
+public extension TextureLoader {
+    func textureAtlases(animationManager: AnimationManager) -> [SKTextureAtlas]? {
+        return nil
+    }
 }
 
 public class AnimationManager {
@@ -19,13 +26,19 @@ public class AnimationManager {
     var lastSystemTime: TimeInterval
     var textureCache: NSCache<NSString, SKTexture>
     let textureLoader: TextureLoader?
-    let textureAtlases: [SKTextureAtlas]?
+    var textureAtlases: [SKTextureAtlas]?
     
-    public init(animationData: ModelData, textureLoader: TextureLoader?) {
+    public init(animationData: ModelData, textureLoader: TextureLoader?, entityName: String? = nil) {
         self.animationData = animationData
         self.textureLoader = textureLoader
         
-        if let atlasNames = self.animationData.atlasNames {
+        self.textureCache = NSCache()
+        self.lastSystemTime = 0
+        
+        let delegateAtlases = textureLoader?.textureAtlases(animationManager: self)
+        if let delegateAtlases = delegateAtlases {
+            textureAtlases = delegateAtlases
+        } else  if let atlasNames = self.animationData.atlasNames {
             var atlases = [SKTextureAtlas]()
             for atlasName in atlasNames {
                 let atlas = SKTextureAtlas(named: atlasName)
@@ -40,9 +53,18 @@ public class AnimationManager {
             textureAtlases = nil
         }
         
-        self.textureCache = NSCache()
-        
-        self.lastSystemTime = 0
+        // this is for overwriting the file's entity name with another value
+        // only if there is one entity in the file
+        if let entityName = entityName,
+            self.animationData.entitiesByName.count == 1,
+            let oldKey = self.animationData.entitiesByName.keys.first,
+            oldKey != entityName {
+            
+            let value = self.animationData.entitiesByName[oldKey]
+            self.animationData.entitiesByName[entityName] = value
+            self.animationData.entitiesByName.removeValue(forKey: oldKey)
+            
+        }
     }
     
     public func update(_ currentTime: TimeInterval) {
